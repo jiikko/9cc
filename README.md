@@ -1,7 +1,12 @@
 # 9cc
+https://www.sigbus.info/compilerbook
 
 ## Setup
-
 ```
-docker-compose run --rm 9cc bash
+docker-compose build
+```
+
+## 実行方法
+```
+docker-compose exec 9cc make test
 ```

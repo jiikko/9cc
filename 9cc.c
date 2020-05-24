@@ -22,7 +22,7 @@ struct Token {
 
 Token *token;
 
-void error(char * fmt, ...) {
+void error(char *fmt, ...) {
   va_list ap;
   va_start(ap, fmt);
   vfprintf(stderr, fmt, ap);
@@ -66,7 +66,7 @@ Token *new_token(TokenKind kind, Token *cur, char *str) {
 Token *tokenize(char *p) {
   Token head;
   head.next = NULL;
-  Token * cur = &head;
+  Token *cur = &head;
 
   while(*p) {
     if(isspace(*p)) {
